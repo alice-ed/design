@@ -59,16 +59,7 @@
 
              <div class="dfe-content-page--header dfe-content-page--header--blog">
                     <div class="govuk-width-container ">
-    <div class="govuk-phase-banner">
-                            <p class="govuk-phase-banner__content">
-                                <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Beta
-    </strong>
-                                <span class="govuk-phase-banner__text">
-      This is something we're trying. Give us <a class="govuk-link" href="/feedback">feedback</a> and help us to make it better.
-    </span>
-                            </p>
-                        </div>
+<a href="/inside-design" class="govuk-back-link">Back to inside design</a>
                        
                         <div class="govuk-grid-row govuk-!-padding-top-5 govuk-!-padding-bottom-0">
                             <div class="govuk-grid-column-three-quarters">
@@ -88,28 +79,19 @@
                                 </dl>
                             </div>
                         </div>
-                       
                     </div>
                 </div>
 
                 <div class="govuk-width-container app-width-container">
                     <main class="govuk-main-wrapper " id="main-content" role="main">
-
                         <div class="govuk-grid-row">
-                           
-
-                            <div class="govuk-grid-column-three-quarters">
+                            <div class="govuk-grid-column-two-thirds">
                                 {% block content %}{% endblock %}
-
-                               
-
                             </div> 
-                            
-                            <div class="govuk-grid-column-one-quarter">
+                            <div class="govuk-grid-column-one-third">
                                 {% block sidebar %}{% endblock%}
                             </div>
                         </div>
-
                     </main>
                 </div>
             {% endblock %}

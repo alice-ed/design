@@ -1254,27 +1254,28 @@ input[type=submit].dfe-a-button {
   width: 100%;
   min-height: 10rem;
   margin: 0 auto;
+  background-color: $color_dfe-grey-4;
 
   &.dfe-o-banner--blog {
     a {
       text-decoration: none;
     }
 
-    .dfe-o-banner__content-container {
-      border-radius: 12px 0 0 12px;
+    // .dfe-o-banner__content-container {
+    //   border-radius: 12px 0 0 12px;
 
-      img {
-        border-radius: 0 12px 12px 0;
-      }
-    }
+    //   img {
+    //     border-radius: 0 12px 12px 0;
+    //   }
+    // }
 
-    .dfe-o-banner__image-container {
-      border-radius: 12px 0 0 12px;
+    // .dfe-o-banner__image-container {
+    //   border-radius: 12px 0 0 12px;
 
-      img {
-        border-radius: 0 12px 12px 0;
-      }
-    }
+    //   img {
+    //     border-radius: 0 12px 12px 0;
+    //   }
+    // }
   }
 }
 
@@ -1282,19 +1283,19 @@ input[type=submit].dfe-a-button {
   flex-direction: row-reverse;
 }
 
-.dfe-o-banner [class^=dfe-t-body],
-.dfe-o-banner [class^=dfe-t-heading] {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: end;
+
+.dfe-o-banner .govuk-heading-l {
+margin-bottom:15px;
+letter-spacing: -0.08rem;
+
 }
 
-.dfe-o-banner [class^=dfe-t-body] {
-  -webkit-line-clamp: 5;
+.dfe-o-banner [class^=govuk-body]{
+margin-bottom:0px;
+@include govuk-font(16);
 }
+
+
 
 .dfe-o-banner__content-container,
 .dfe-o-banner__image-container {
@@ -1309,6 +1310,10 @@ input[type=submit].dfe-a-button {
 .dfe-o-banner__inner-content-container {
   width: 100%;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
 }
 
 .dfe-o-banner__inner-content-container .dfe-a-button {
@@ -1347,6 +1352,16 @@ input[type=submit].dfe-a-button {
   padding: 50px 0px;
   background: $color_dfe-secondary-blue;
 
+  &.dfe-hero-super{
+
+  padding: 110px 0px 120px;
+
+  }
+
+  .dfe-hero-image{
+    max-height: 230px;
+  }
+
   .govuk-heading-xl,
   p {
     color: $color_dfe-white !important
@@ -1379,17 +1394,10 @@ input[type=submit].dfe-a-button {
 
 .dfe-card {
   position: relative;
-  background-color: #f3f2f1;
+  background-color: $color_dfe-grey-4;
   border-bottom: 3px solid $color_dfe-blue;
   max-width: 400px;
 
-  &.dfe-card--blog-card {
-    border-radius: 12px 12px 0 0;
-
-    img {
-      border-radius: 12px 12px 0 0;
-    }
-  }
 }
 
 @include govuk-media-query($until: tablet) {
@@ -1825,4 +1833,10 @@ code {
     }
 
   }
+}
+
+.featured-banner{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid $color_dfe-blue;
 }

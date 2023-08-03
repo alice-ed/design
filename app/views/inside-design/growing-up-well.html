@@ -1,0 +1,78 @@
+{% extends "layouts/work-post-layout.html" %}
+
+{% set pageName = "Growing up well digital project" %}
+{% set pageDescription = "The project works across education, health, and social care to improve outcomes for vulnerable and disadvantaged children, young people, and families." %}
+{% set selectedNav = "Inside design" %}
+{% set setSelectedSideNav = "" %}
+{% set lastUpdated = ""%}
+{% set backlog_issue_id = "" %}
+{% set author = "Laura Croft" %}
+{% set authorRole = "Senior Service Designer" %}
+{% set publishedDate = "2 August 2023" %}
+
+
+
+{% block content %}
+
+ <figure class="dfe-a-image govuk-!-margin-bottom-5">
+          <picture class="dfe-a-image__picture">
+            <img src="/assets/images/nursery.jpg" alt="">
+          </picture>
+        </figure>
+
+    <h1 class="govuk-heading-l">Project</h1>
+    <p class="govuk-body">Our Growing Up Well (FH-GUW) project is funded by HM Treasury through the Shared Outcomes Fund until March 2025. The project works across education, health, and social care to improve outcomes for vulnerable and disadvantaged children, young people, and families.</p>
+    <p class="govuk-body">Through the FH-GUW project we have developed important digital products that will improve the experience, access and connectivity of professionals and families using family hubs.</p>
+
+    <h2 class="govuk-heading-m">Partnership working</h2>
+    <p class="govuk-body">We are delivering the project through an iterative, agile process. This involves working closely with a small number of Local Authorities (LAs) across several stages to develop, test, embed and iterate these digital products.</p>
+    <p class="govuk-body">We are working with:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Bristol</li>
+        <li>Lancashire</li>
+        <li>Suffolk</li>
+        <li>Redbridge</li>
+        <li>Salford</li>
+        <li>Tower Hamlets</li>
+    </ul>
+    <p class="govuk-body">During our discovery, we identified user needs and pain points (discovery), to develop and test ideas in our alpha. And we are now in the private beta test and build stage.  We are piloting digital products within our local authority partner areas.</p>
+
+    <h2 class="govuk-heading-m">Gaining wider input</h2>
+    <p class="govuk-body">Our partnership working is supplemented by our local authority co-design group, which is made up of a larger group of LA representatives covering various roles and levels of seniority. The group supports our digital products by bringing together the perspectives and experiences of LAs across England, providing regular input to our roadmap, designs and development work. The group have met regularly for over a year and have participated in a wide range of workshops that help to shape our products, for example in identifying new features, project risks, shaping project communications. The LA members bring their own expertise and share family hub progress in their local areas.</p>
+    <p class="govuk-body">For the private betas, we are just testing the ability to search and find support services from a directory. We are also looking into how we can build in national level advice and guidance for families and national support services.</p>
+
+    <h2 class="govuk-heading-m">Services in test stage</h2>
+    <h3 class="govuk-heading-s">Find support for your family</h3>
+    <p class="govuk-body">Helps families find their local family hubs and support services available to them within their local family hub network. This service will eventually enable families to find and access services provided by their local authority, voluntary and community sector organisations and other state and non-state funded organisations. It provides non-stigmatising access to preventative support and will reduce families’ needs from escalating to statutory support. </p>
+
+    <h3 class="govuk-heading-s">Connect families to support</h3>
+    <p class="govuk-body">Helps professionals find and connect families to support services available to them within their local family hub network. This service will eventually enable professionals to navigate local services and make a request for support for families. It will also allow professionals to share information about families with service providers more efficiently so that they can save time, make better informed decisions, and help the families they work with to receive the right support at the right time.  </p>
+
+    <h3 class="govuk-heading-s">Manage family support services and accounts</h3>
+    <p class="govuk-body">Helps LAs and VCFS organisations (and other state and non-state service providers) manage the users and services on Find and Connect. </p>
+    <p class="govuk-body">We are aware that the FH-GUW products can only be as good as the data which underpins and powers them. A challenge faced by many. </p>
+
+    <h2 class="govuk-heading-m">Data and sustainability</h2>
+    <p class="govuk-body">We have used a spreadsheet to bulk upload the services listed in the private beta services we are testing with our partner LAs. This is not sustainable.</p>
+    <p class="govuk-body">A barrier to adopting any product, locally or nationally, is data standards. That is why we, alongside others, are investigating the use of a single data standard, such as the Open Referral UK.</p>
+    <p class="govuk-body">The benefits would include making it easier for LAs to store and share data with us and others. Allowing for integration with existing local Family Information Services (FIS), local internal systems, borough or partnership offers etc, alongside regional and national directories.</p>
+
+    <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Disclaimer</h2>
+        <p class="govuk-body">This page shares the ideas and thinking of the digital team within DfE. Any ideas that would require a policy or guidance change would go through a formal consultation.</p>
+        <p class="govuk-body">Please be aware that we cannot respond to questions about the department, policy or other services. You can find out more information about the <a href="http://gov.uk/dfe" class="govuk-link" target="_blank" rel="noopener noreferrer">departments priorities and policies on GOV.UK</a>, along with how to raise enquiries with the department.</p>
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+
+    <aside>
+        <h2 class="govuk-heading-m">Related content</h2>
+        <p class="govuk-body">Email</p>
+        <p class="govuk-body">Data sustainability survey for LAs</p>
+        <p class="govuk-body">
+            <a class="govuk-link" href="https://familyhubsnetwork.com/developing-digital-tools/" target="_blank" rel="noopener noreferrer">https://familyhubsnetwork.com/developing-digital-tools/</a>
+        </p>
+    </aside>
+
+    {% endblock%}

@@ -6,7 +6,9 @@
 
   <head>
     <meta charset="utf-8">
-             <title>{% if seoPageName %}{{seoPageName}}{% elseif pageName %}{{pageName}}{%endif%} - Design Manual - Department for Education</title>
+    <title>
+      {% if seoPageName %}{{seoPageName}}
+      {% elseif pageName %}{{pageName}}{%endif%} - Design Manual - Department for Education</title>
       <meta name="description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
       <meta name="theme-color" content="#0b0c0c">
@@ -18,7 +20,7 @@
       <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
       <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
       <link href="/assets/css/app.min.css" rel="stylesheet">
-                  <meta property="og:url" content="https://design.education.gov.uk"/>
+      <meta property="og:url" content="https://design.education.gov.uk"/>
       <meta property="og:site_name" content="Department for Education Design Manual"/>
       <meta property="og:title" content="{{pageName}}"/>
       <meta property="og:description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}"/>
@@ -30,7 +32,7 @@
       <meta name="twitter:site" content="@dfe_digital">
       <meta name="twitter:creator" content="@dfe_digital">
       <meta name="twitter:image:alt" content="Department for Education Design Manual">
-      <meta name="twitter:image" content="https://design.education.gov.uk/assets/images/dm_og.png" />
+      <meta name="twitter:image" content="https://design.education.gov.uk/assets/images/dm_og.png"/>
       {% block head %}{% endblock %}
     </head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
@@ -42,7 +44,7 @@
           ? document.body.className + ' js-enabled'
           : 'js-enabled');
       </script>
-            {% include 'layouts/_cookiebanner.html'%}
+      {% include 'layouts/_cookiebanner.html'%}
       <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
       {% include 'layouts/_topnav.html'%}
       {% include 'layouts/_feedback.html'%}
@@ -52,45 +54,13 @@
 
       {% endblock %}
 
+
+  {% block hero %}{% endblock %}
+
       {% block main %}
 
-        <div class="dfe-content-page--header dfe-content-page--header--blog">
-          <div class="govuk-width-container ">
-            <div class="govuk-phase-banner">
-              <p class="govuk-phase-banner__content">
-                <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Beta
-    </strong>
-                <span class="govuk-phase-banner__text">
-      This is something we're trying. Give us <a class="govuk-link" href="/feedback">feedback</a> and help us to make it better.
-    </span>
-              </p>
-            </div>
+      
 
-            <div class="govuk-grid-row govuk-!-padding-top-5 govuk-!-padding-bottom-0">
-              <div class="govuk-grid-column-three-quarters">
-
-               <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
-                <p class="govuk-body-l">{{pageDescription}}</p>
-
-                {% if lastUpdated %}
-
-                  <p class="govuk-body-s govuk-!-margin-bottom-0">
-                    <span class="govuk-!-font-weight-bold">Last updated: </span>
-                    {{lastUpdated}}</p>
-
-                {% endif %}
-
-              </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-top-0 govuk-!-padding-bottom-7">
-              <div class="govuk-grid-column-full">
-                {% block heroExtra %}{% endblock %}
-
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="govuk-width-container app-width-container">
           <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -101,8 +71,17 @@
                 {% block featured %}{% endblock %}
               </div>
 
-              <div class="govuk-grid-column-full">
+                </div>
+
+
+              <div class="govuk-grid-row">
+
+              <div class="govuk-grid-column-three-quarters">
                 {% block content %}{% endblock %}
+              </div>
+
+                   <div class="govuk-grid-column-one-quarter govuk-!-margin-top-4">
+                {% block sidebar %}{% endblock %}
               </div>
 
             </div>
@@ -117,10 +96,10 @@
       {% include 'layouts/_footer.html'%}
     {% endblock %}
 
-       <script src="/assets/js/all.min.js"></script>
-      <script src="/assets/js/cookies.min.js"></script>
-      <script src="/assets/js/feedback.min.js"></script>
-      <script src="/assets/js/dfefrontend.min.js"></script>
+    <script src="/assets/js/all.min.js"></script>
+    <script src="/assets/js/cookies.min.js"></script>
+    <script src="/assets/js/feedback.min.js"></script>
+    <script src="/assets/js/dfefrontend.min.js"></script>
 
     {% block scripts %}{% endblock %}
 

@@ -1,0 +1,111 @@
+{% extends "layouts/inside-design-home-layout.html" %}
+
+{% set pageName = "Inside design" %}
+{% set pageDescription = "Read about the work we do in the Department for Education across design teams." %}
+{% set selectedNav = "Inside design" %}
+{% set setSelectedSideNav = "" %}
+{% set lastUpdated = ""%}
+{% set backlog_issue_id = "" %}
+{% set isbeta = "true" %}
+
+{% block hero %}
+  <section class="dfe-hero dfe-hero-super">
+    <div class="govuk-width-container ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-xl govuk-!-font-size-80">{{pageName}}</h1>
+          <p class="govuk-body govuk-!-font-size-36">{{pageDescription}}</p>
+        </div>
+        <div class="govuk-grid-column-one-third" style="text-align: center;">
+          <img src="/assets/images/right-arrow.png" alt="" class="dfe-hero-image">
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block featured %}
+
+  <section class="featured-banner">
+    <div class="dfe-o-banner dfe-o-banner--blog govuk-!-margin-bottom-5">
+
+      <div class="dfe-o-banner__content-container">
+        <div class="dfe-o-banner__inner-content-container">
+
+          <div>
+            <h2 class="govuk-heading-l">
+              <a class="govuk-link govuk-link--no-visited-state" href="/inside-design/service-assessments">How we're working to improve the service assessment process</a>
+            </h2>
+            <p style="margin-bottom: 30px;">Working across department boundaries to create an assurance process that is robust and suitable.</p>
+          </div>
+            <div style="display: flex; align-items: center;">
+            <p class="govuk-!-margin-bottom-0"><a class="govuk-link" href="">Read about this project</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dfe-o-banner__image-container">
+        <figure class="dfe-a-image dfe-a-image--cover">
+          <picture class="dfe-a-image__picture">
+            <source srcset="/assets/images/assessment-blog.webp" type="image/webp">
+            <img src="/assets/images/assessment-blog.png" alt="">
+          </picture>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block content %}
+
+  <section>
+
+   <div class="dfe-o-banner dfe-o-banner--blog dfe-o-banner--mirrored govuk-!-margin-top-5">
+
+      <div class="dfe-o-banner__content-container">
+        <div class="dfe-o-banner__inner-content-container">
+
+          <div>
+            <h2 class="govuk-heading-m">
+              <a class="govuk-link govuk-link--no-visited-state" href="/inside-design/growing-up-well">Growing Up Well digital project</a>
+            </h2>
+            <p class="govuk-body">The project works across education, health, and social care to improve outcomes for vulnerable and disadvantaged children, young people, and families. </p>
+           
+          </div>
+
+            <div style="display: flex; align-items: center;">
+            <p class="govuk-!-margin-bottom-0"><a class="govuk-link" href="">Read about this project</a></p>
+          </div>
+         
+        </div>
+
+      </div>
+
+      <div class="dfe-o-banner__image-container">
+        <figure class="dfe-a-image dfe-a-image--cover">
+          <picture class="dfe-a-image__picture">
+            <img src="/assets/images/nursery.jpg" alt="">
+          </picture>
+        </figure>
+
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
+
+{% block sidebar %}
+
+<h2 class="govuk-heading-m">Read about our other work</h2>
+
+<ul class="govuk-list">
+  <li><a class="govuk-link" href="https://design-histories.education.gov.uk">Design Histories</a></li>
+  <li><a class="govuk-link" href="https://dfedigital.blog.gov.uk/">DfE Digital, Data and Technology</a></li>
+  </ul>
+
+  {% endblock%}
