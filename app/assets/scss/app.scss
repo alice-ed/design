@@ -1248,6 +1248,14 @@ input[type=submit].dfe-a-button {
   min-height: calc(2.5rem - .69px);
 }
 
+.dfe-panel
+{
+  width: 100%;
+  min-height: 10rem;
+  margin: 0 auto;
+  background-color: $color_dfe-grey-4;
+  padding: 3rem;
+}
 
 .dfe-o-banner {
   display: flex;
@@ -1290,9 +1298,9 @@ letter-spacing: -0.08rem;
 
 }
 
-.dfe-o-banner [class^=govuk-body]{
+.dfe-o-banner .govuk-body{
 margin-bottom:0px;
-@include govuk-font(16);
+@include govuk-font(19);
 }
 
 

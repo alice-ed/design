@@ -1,0 +1,51 @@
+{% extends "layouts/work-post-layout.html" %}
+
+{% set pageName = "How we're working to improve the service assessment process" %}
+{% set pageDescription = "Working across department boundaries to create an assurance process that is robust and suitable." %}
+{% set selectedNav = "Inside design" %}
+{% set setSelectedSideNav = "" %}
+{% set lastUpdated = ""%}
+{% set backlog_issue_id = "" %}
+{% set author = "Andy Jones" %}
+{% set authorRole = "Head of Design" %}
+{% set publishedDate = "2 August 2023" %}
+
+
+
+{% block content %}
+
+ <figure class="dfe-a-image govuk-!-margin-bottom-5">
+          <picture class="dfe-a-image__picture">
+            <source srcset="/assets/images/assessment-blog.webp" type="image/webp">
+            <img src="/assets/images/assessment-blog.png" alt="">
+          </picture>
+        </figure>
+
+    <h1 class="govuk-heading-l">Project</h1>
+    <p class="govuk-body"></p>
+
+   
+    <h2 class="govuk-heading-m">Gaining wider input</h2>
+    <p class="govuk-body">Our partnership working is supplemented by our local authority co-design group, which is made up of a larger group of LA representatives covering various roles and levels of seniority. The group supports our digital products by bringing together the perspectives and experiences of LAs across England, providing regular input to our roadmap, designs and development work. The group have met regularly for over a year and have participated in a wide range of workshops that help to shape our products, for example in identifying new features, project risks, shaping project communications. The LA members bring their own expertise and share family hub progress in their local areas.</p>
+    <p class="govuk-body">For the private betas, we are just testing the ability to search and find support services from a directory. We are also looking into how we can build in national level advice and guidance for families and national support services.</p>
+
+    <h2 class="govuk-heading-m">Services in test stage</h2>
+    <h3 class="govuk-heading-s">Find support for your family</h3>
+
+    <h2 class="govuk-heading-m">Data and sustainability</h2>
+    <p class="govuk-body">We have used a spreadsheet to bulk upload the services listed in the private beta services we are testing with our partner LAs. This is not sustainable.</p>
+ 
+  
+{% endblock %}
+
+{% block sidebar %}
+
+    <aside>
+        <h2 class="govuk-heading-m">Related content</h2>
+       <ul class="govuk-list">
+<li><a href="">Design History</a></li>
+<li><a href="">Contact Design Ops</a></li>
+        </ul>
+    </aside>
+
+    {% endblock%}
