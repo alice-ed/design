@@ -1,0 +1,84 @@
+{% set pageName = "GitHub" %}
+{% set pageDescription = "Using GitHub in the Department for Education to securely store code and work in the open." %}
+{% set selectedNav = "Prototyping" %}
+{% set lastUpdated = "october 2023" %}
+{% set backlog_issue_id = "40" %}
+
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+    <p>When you build prototypes in code, for example, using the <a href="/prototyping/kit" class="govuk-link" >prototype kit</a>, you should store them as repositories in <a href="https://github.com/DFE-Digital" class="govuk-link">the DfE GitHub instance</a>.</p>
+
+    <p>Using GitHub to store your prototypes will ensure you're working towards meeting <a href="https://apply-the-service-standard.education.gov.uk/service-standard/12-make-new-source-code-open" class="govuk-link">Service Standard 12 - Make new source code open</a>.</p>
+
+    <h3 class="govuk-heading-m">Getting access to GitHub</h3>
+
+    <p>If you don't have an existing GitHub account, <a href="https://github.com/signup" class="govuk-link" target="_blank">sign up for a free account</a>.</p>
+    <p>If you have an existing GitHub account, or, you've created a new one, you can request to be added to the DfE organisation GitHub area.</p>
+
+    <h3 class="govuk-heading-m">Request access to the DfE GitHub organisation</h3>
+    <p>We have a DfE organisation instance in GitHub which means all DfE-related code can be stored securely in one place, to get access, submit a Service Now request</p>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>go to <a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" class="govuk-link" target="_blank">Digital Tools Support</a> in Slack</li>
+        <li>select Digital Tools Requests from the pinned options (top of the channel)</li>
+        <li>choose GitHub - Service Portal</li>
+    </ol>
+
+    <p>Once you have access, you'll be able to view all public and private projects and code (also called repositories), and create new repositories.</p>
+
+    <h3 class="govuk-heading-m">Naming your repository</h3>
+
+    <p>You should include the word prototype in your repository name to prevent people getting confused with production services.</p>
+    <p>Use the name of your service, in lowercase, separated by hyphens, followed by the word prototype.</p>
+
+    <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-font-weight-bold">Example reposititory name</p>
+        <p>apply-for-funding-prototype</p>
+    </div>
+
+    <h3 class="govuk-heading-m">Learn more about GitHub</h3>
+
+    <p>There are lots of resources available for how to use GitHub.</p>
+
+    <div class="dfe-grid-container govuk-!-margin-bottom-5">
+        <div class="dfe-card">
+            <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                    <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="https://skills.github.com/" target="_blank">GitHub Skills</a>
+                </h2>
+                <p>Learn how to use GitHub with interactive courses designed for beginners and experts.</p>
+            </div>
+        </div>
+        <div class="dfe-card">
+            <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                    <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="https://www.youtube.com/github" target="_blank">GitHub YouTube</a>
+                </h2>
+                <p>Videos for getting started and working with GitHub on YouTube.</p>
+            </div>
+        </div>
+        <div class="dfe-card">
+            <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                    <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href=" https://training.github.com/downloads/github-git-cheat-sheet/" target="_blank">GitHub cheat sheet</a>
+                </h2>
+                <p>Frequently used commands for managing code repositories and changes.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p>You can also reach out in the <a href="https://ukgovernmentdfe.slack.com/archives/CAGBHB4JV" class="govuk-link" >#developers</a> slack channel for advice and support.</p>
+
+    <h2 class="govuk-heading-l" id="hosting">Hosting your prototypes</h2>
+
+    <p>Once you have your prototype code stored in GitHub, you can then get it up and running as a working website using Heroku.</p>
+    <p>You'll also be able to set it up so that any new changes get automatically deployed when you push changes to code, up to GitHub.</p>
+
+<p><a href="/prototyping/heroku" class="govuk-link" >Get started with using Heroku</a>.</p>
+
+{% endblock %}

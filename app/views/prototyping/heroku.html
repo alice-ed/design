@@ -1,0 +1,96 @@
+{% set pageName = "Heroku" %}
+{% set pageDescription = "Using Heroku in the Department for Education to run prototypes for testing with users." %}
+{% set selectedNav = "Prototyping" %}
+{% set lastUpdated = "october 2023" %}
+{% set backlog_issue_id = "40" %}
+
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+    <p>Depending on what testing you plan to do with users, you might want to run your prototype as a website, rather than on your local device.</p>
+
+    <p>We use <a href="https://www.heroku.com/" class="govuk-link"  target="_blank" rel="noopener noreferrer">Heroku</a> to host prototypes. Most teams have been set up to be able to run prototypes using Heroku Enterprise. </p>
+
+    <p>If you are unsure if your team has a Heroku team set up, contact: <a href="/design-ops/contact" class="govuk-link">Design Ops</a>. We can help with getting your team created or adding you if it already exists.</p>
+
+    <div class="govuk-inset-text">
+        <strong>Heroku is not free</strong>
+        <p>Your programme will be cross-charged approximately £6 a month for each prototype that is run in your team space.</p>
+        <p>If you are unsure about using Heroku, contact <a href="/design-ops/contact" class="govuk-link" >Design Ops</a>
+        </p>
+    </div>
+
+    <h2 class="govuk-heading-l">Set up a new app</h2>
+    <p>You'll need to have been assigned to a team before being able to set up a new app.</p>
+    <p>In Heroku, apps are also referred to as a dyno.</p>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Sign in to <a href="https://www.heroku.com/" class="govuk-link"  target="_blank" rel="noopener noreferrer">Heroku</a>
+        </li>
+        <li>Your dashboard will likely start on your "Personal" profile (top left of the dashboard will say Personal) </li>
+        <li>Click the Personal link and change to your team</li>
+        <li>Click the New buttom (top right) and select "Create new app"</li>
+        <li>Give your prototype a name, use lowercase characters, separated by hyphens. This forms your prototype URL</li>
+        <li>Set the region to Europe</li>
+        <li>Click Create app</li>
+        <li>On the next screen, select GitHub from the Deployment method section</li>
+        <li>In the GitHub section change the repository location to DFE-Digital</li>
+        <li>Search for your prototype and select Connect against the one you want to deploy to Heroku</li>
+        <li>Read the following section about <a href="#auto" class="govuk-link" >automatic deployments</a> before enabling them</li>
+        <li>Click the Deploy branch button</li>
+        <li>
+            <a href="#password" class="govuk-link" >Set up a password</a> for your prototype</li>
+    </ol>
+
+    <p>After a few minutes your code will be deployed from GitHub to your Heroku app, and your prototype will be up and running.</p>
+
+    <p>You can get help from the <a href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7"  target="_blank" class="govuk-link" rel="noopener noreferrer" > #design-ops</a> team if you encounter any problems.</p>
+
+    <h3 class="govuk-heading-m" id="auto">Automatic deployments on code changes</h3>
+
+    <p>If you want to have code changes automatically deployed when changes are pushed to GitHub, select "Enable automatic deploys" on the Deploy screen in your Herokun app.</p>
+
+    <p>If you push broken code, or code that doesn't build to the GitHub repo, this can cause the deployment to fail and your prototype to stop running.</p>
+
+    <h3 class="govuk-heading-m" id="password">Secure your prototype from accidental use</h3>
+
+    <p>You must use a password to protect your prototype from users accidentally thinking it's a live service.</p>
+
+    <p>You can do this by setting environment variables in the config vars section within settings of the prototype.</p>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Sign in to <a href="https://www.heroku.com/" class="govuk-link"  target="_blank" rel="noopener noreferrer">Heroku</a>
+        </li>
+        <li>Select your prototype from your dashboard</li>
+        <li>Click on Settings</li>
+        <li>Find the section called "Config Vars" (vars means variables)</li>
+        <li>Click the button that says "Reveal Config Vars"</li>
+        <li>Add an environment variable where the 'KEY' is NODE_ENV, and the 'VALUE' is 'production'</li>
+        <li>Add another environment variable where the 'KEY' is PASSWORD, and the 'VALUE' is whatever password you would like to use.</li>
+    </ol>
+
+    <p>Your app will restart automatically and then next time you visit the prototype, you'll be asked to enter the password.</p>
+
+    <h2 class="govuk-heading-l" id="dynos">Save money when running dynos (apps)</h2>
+
+    <p>If you leave your dyno running 24x7, 7 days a week, it will cost money. This works out about £6 a month per dyno. So if you have 10 separate prototypes in your team, that's £60 a month.</p>
+
+    <p>You can save your team money, but turning your prototypes off, if you know they aren't going to be used for a period of time.</p>
+
+    <h3 class="govuk-heading-m" id="disable-dyno">Disable your dyno temporarily</h3>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Sign in to <a href="https://www.heroku.com/" class="govuk-link"  target="_blank" rel="noopener noreferrer">Heroku</a>
+        </li>
+        <li>Select your prototype from your team's dashboard (you might need to change your dashboard from Personal to your team)</li>
+        <li>Click on Resources</li>
+        <li>You should see a section under Basic Dynos which shows a toggle and "~$0.010/hour"</li>
+        <li>Click the pencil icon next to this text and toggle the dyno to off and confirm the action</li>
+        <li>This will shut the dyno down, your app will stop, and charging will be paused.</li>
+        <li>When you're ready to start using the prototype again, sign back in, toggle the dyno back on and your app will start up after a few seconds.</li>
+    </ol>
+
+{% endblock %}
